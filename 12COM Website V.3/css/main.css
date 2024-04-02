@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+
+html,
+body,
+div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	overflow-x: hidden;
+}
+
+/* Basic */
+
+body,
+input,
+select,
+textarea {
+	color: #fff;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-size: 15pt;
+	font-weight: 400;
+	letter-spacing: 0.075em;
+	line-height: 1.65em;
+}
+
+@media screen and (max-width: 1680px) {
+	body,
+	input,
+	select,
+	textarea {
+		font-size: 13pt;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	body,
+	input,
+	select,
+	textarea {
+		font-size: 12pt;
+		letter-spacing: 0.05em; 
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #fff;
+	font-weight: 800;
+	letter-spacing: 0.225em;
+	line-height: 1em;
+	margin: 0 0 1em 0;
+	text-transform: uppercase;
+}
+
+/* Spotlight */
+
+.spotlight {
+	align-items: center;
+	display: flex;
+}
+
+.spotlight .image {
+	order: 1;
+	border-radius: 0;
+	width: 40%;
+	margin-bottom: 0;
+}
+
+.spotlight .image img {
+	border-radius: 0;
+	width: 100%;
+}
+
+.spotlight .content {
+	padding: 2em 4em 0.1em 4em;
+	order: 2;
+	max-width: 48em;
+	width: 60%;
+}
+
+.spotlight:nth-child(2n) {
+	flex-direction: row-reverse;
+}
+
+.spotlight:nth-child(1) {
+	background-color: rgba(0, 0, 0, 0.075);
+}
+
+.spotlight:nth-child(2) {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+.spotlight:nth-child(3) {
+	background-color: rgba(0, 0, 0, 0.225);
+}
+
+@media screen and (max-width: 1280px) {
+	.spotlight .image {
+		width: 45%;
+	}
+	.spotlight .content {
+		width: 55%;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.spotlight {
+		display: block;
+	}
+	.spotlight br {
+		display: none;
+	}
+	.spotlight .image {
+		width: 100%;
+	}
+	.spotlight .content {
+		padding: 4em 3em 2em 3em;
+		max-width: none;
+		text-align: center;
+		width: 85%;
+	}
+}
+
+/* Wrapper */
+
+.wrapper {
+	padding: 6em 0 4em 0;
+}
+
+.wrapper>.inner {
+	width: 60em;
+	margin: 0 auto;
+}
+
+.wrapper.alt.style2 .spotlight .image img {
+	filter: grayscale(10%) brightness(90%);
+}
+
+@media screen and (max-width: 1280px) {
+	.wrapper>.inner {
+		width: 90%;
+	}
+}
+
+.wrapper.alt {
+	padding: 0;
+}
+
+.wrapper.style1 {
+	background-color: #21b2a6;
+	color: #c7ebe8;
+	text-align: center;
+}
+
+.wrapper.style2 {
+	background-color: #2e3842;
+	color: lightgray;
+}
+
+/* Banner */
+
+#banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	min-height: 35em;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#banner h2 {
+	display: inline-block;
+	font-size: 1.75em;
+	opacity: 1;
+	padding: 0.35em 1em;
+	position: relative;
+}
+
+#banner h2:before,
+#banner h2:after {
+	background: #fff;
+	content: '';
+	display: block;
+	height: 2px;
+	position: absolute;
+	width: 100%;
+}
+
+#banner h2:before {
+	top: 0;
+	left: 0;
+}
+
+#banner h2:after {
+	bottom: 0;
+	right: 0;
+}
+
+#banner p {
+	letter-spacing: 0.225em;
+	text-transform: uppercase;
+}
+
+#banner .more {
+	text-decoration: none;
+	border: none;
+	bottom: 0;
+	color: inherit;
+	font-size: 0.8em;
+	height: 8.5em;
+	left: 50%;
+	letter-spacing: 0.225em;
+	margin-left: -8.5em;
+	opacity: 1;
+	outline: 0;
+	padding-left: 0.225em;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+	width: 16em;
+	z-index: 1;
+}
+
+@media screen and (max-width: 1280px) {
+	#banner .more {
+	text-decoration: none;
+	border: none;
+	bottom: -5%;
+	color: inherit;
+	font-size: 0.8em;
+	height: 8.5em;
+	left: 50%;
+	letter-spacing: 0.225em;
+	margin-left: -8.5em;
+	opacity: 1;
+	outline: 0;
+	padding-left: 0.225em;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+	width: 16em;
+	z-index: 1;
+	}
+}
+
+#banner .more:after {
+	background-image: url("images/arrow.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	bottom: 4em;
+	content: '';
+	display: block;
+	height: 1.5em;
+	left: 50%;
+	margin: 0 0 0 -0.75em;
+	position: absolute;
+	width: 1.5em;
+}
+
+/* Landing */
+
+body.landing #page-wrapper {
+	background-image: url("images/clean.jpeg") ;
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 0;
+}
